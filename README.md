@@ -1,50 +1,55 @@
 # Convite de Casamento — Alex & Rúbia
 
-Reclone do convite interativo `webgencyinvitations.com/thesacredgarden`
-("The Sacred Garden" — Tilda), atualizado para o cliente.
+**Estado atual: copy-only.** `index.html` = template ORIGINAL (The Sacred Garden /
+Tilda) com **somente os textos** trocados para pt-BR (dados do casal). Toda a
+mídia, paleta e layout originais foram mantidos intencionalmente.
 
 ## Dados do cliente
 | Item | Valor |
 |---|---|
 | Noivos | Alex e Rúbia |
-| Data/Horário | 27/09/2026 · 14h |
+| Data/Horário | 27/09/2026 · 14h (countdown ajustado) |
 | Local | Praia de Maracaípe — em frente à Pousada Maraoka (Ipojuca, PE) |
-| Paleta | Verde oliva + branco |
-| RSVP | WhatsApp +55 81 8216-5064 |
+| Paleta | (mantida a original — aguardando edição pontual p/ verde oliva) |
+| RSVP | (formulário original — aguardando edição pontual p/ WhatsApp) |
 
-## Estrutura
+## O que mudou (SÓ TEXTO)
+- Nomes: Zohan & Rose → Alex & Rúbia
+- "Wedding Day" → "Vamos nos casar"; "Two Souls / One destiny / A Lifetime
+  written by Allah" → "Duas almas / Um destino / Uma história escrita com amor"
+- Mensagens, seções, programação, local, traje, presentes → pt-BR
+- Formulário RSVP → pt-BR
+- Countdown → 27/09/2026 14h
+- `<title>` / og:title → Alex & Rúbia · Casamento
+
+## O que NÃO mudou (intencional — aguardando instrução)
+- Vídeo de abertura (original Zohan & Rose do CDN R2) — **será substituído pelo
+  vídeo do Google Flow que o Thiago vai fazer**
+- Música (Einaudi — Divenire, CDN R2)
+- Imagem da capa (envelope original)
+- Paleta (creme + vinho originais)
+- Layout/estrutura Tilda inteira
+- Horários da programação (5 PM etc.) — edição pontual pendente
+
+## Arquivos
 ```
 Alex e Rúbia - Convite Casamento/
-├── index.html                        ← SITE (abrir este)
+├── index.html                        ← SITE (original + copy pt-BR)
+├── index-original-backup.html        ← Original intacto (fonte da copy)
+├── index-v1-custom-backup.html       ← Minha 1ª versão (descartada)
+├── The Sacred Garden (...) - singlefile-backup.html  ← SingleFile original
 ├── 01-ANATOMIA-TRANSICAO.md          ← Investigação da transição capa→vídeo→tela
-├── 02-PROMPT-CAPA.md                 ← Prompt p/ gerar a arte da capa (iniciais + selo)
-├── index-original-backup.html        ← Original Tilda (pasta webgencyinvitations.com)
-├── The Sacred Garden (...) - singlefile-backup.html  ← Original SingleFile completo
-└── assets/
-    ├── video-abertura.mp4            ← Vídeo 4.8s com a foto do casal (ken burns)
-    ├── musica.mp3                    ← Música de fundo (Einaudi — placeholder)
-    ├── casal.webp / casal.jpg        ← Foto otimizada (900px, 265KB/311KB)
-    ├── foto-casal-original.png       ← Foto original (8MB, backup)
-    ├── referencia-capa-original.png  ← Capa do convite original (referência)
-    └── fonts/                        ← Cinzel, Ovo, Imperial Script, BeauRivage
+├── 02-PROMPT-CAPA.md                 ← Prompt p/ arte da capa (uso futuro)
+├── README.md
+└── assets/                           ← mídias da v1 (não usadas pelo index atual;
+                                         mantidas até o vídeo do Google Flow chegar)
 ```
 
-## Comportamento (replicado 1:1 do original)
-1. Capa fullscreen com monograma A&R + selo de cera (borda iluminada pulsando).
-2. Toque → selo "abre" + capa fade out 1.4s + vídeo fade in 0.8s + música simultânea.
-3. Vídeo sai 0.8s antes do fim (fade 1.4s) → botão flutuante play/pause aparece.
-4. Seções: hero (nomes, data, local, foto) → countdown → cerimônia/local + mapa →
-   RSVP (form → WhatsApp) → final.
-5. Countdown real até 27/09/2026 14:00 (fuso -03:00).
+## Link público
+https://tm-sempre-tecnologia.github.io/convite-alex-rubia/
 
-Detalhes da investigação: `01-ANATOMIA-TRANSICAO.md`.
-
-## Para substituir mídias (cliente final)
-- **Vídeo do casal**: trocar `assets/video-abertura.mp4` (ideal 720x1280, 4-6s).
-- **Música**: trocar `assets/musica.mp3`.
-- **Foto do hero**: trocar `assets/casal.webp`.
-- **Capa (arte)**: gerar com o prompt de `02-PROMPT-CAPA.md`, salvar `assets/capa.png`
-  e usar no `#weiOverlay` (instrução no doc 01).
-
-## Abrir
-Duplo clique em `index.html` (funciona offline — fontes/mídias locais).
+## Próximas edições (pontuais, aguardando o Thiago)
+1. Vídeo da entrada (Google Flow) → substituir a mídia original
+2. Paleta verde oliva + branco
+3. Horários da programação
+4. RSVP → WhatsApp +55 81 8216-5064
